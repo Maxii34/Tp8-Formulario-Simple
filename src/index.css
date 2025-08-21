@@ -1,6 +1,17 @@
-:root {
+#root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+main{
+  flex-grow: 1;
+}
+nav {
+  background-color: #1D293D;
 }
 
