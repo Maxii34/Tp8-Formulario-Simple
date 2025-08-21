@@ -13,7 +13,7 @@ const Formulario = () => {
   const validacion = (datos) => {
     Swal.fire(
       "Datos enviados",
-      "Los datos fueron enviados correctamente",
+      "Los datos fueron enviados correctamente.",
       "success"
     );
 
@@ -21,10 +21,10 @@ const Formulario = () => {
   };
 
   return (
-    <Container className="py-4">
+    <Container className="py-2">
       {/* Título */}
       <div className="text-dark text-center py-3 mb-2">
-        <h1>Formulario</h1>
+        <h1 className="display-4">Formulario</h1>
       </div>
 
       <Row className="justify-content-center">
@@ -33,7 +33,7 @@ const Formulario = () => {
             <Card.Body>
               <Form
                 onSubmit={handleSubmit(validacion, (errors) => {
-                  Swal.fire("Error", "Completar todos los datos", "error");
+                  Swal.fire("Error", "Completa todos los datos.", "error");
                 })}
               >
                 {/* Nombre */}
@@ -41,7 +41,7 @@ const Formulario = () => {
                   <Form.Label>Nombre</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Escriba su nombre completo"
+                    placeholder="Escriba su nombre."
                     {...register("nombre", {
                       required: "Por favor ingrese un nombre válido.",
                       minLength: {
@@ -64,7 +64,7 @@ const Formulario = () => {
                   <Form.Label>Apellido</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Ingrese su apellido"
+                    placeholder="Ingrese su apellido."
                     {...register("apellido", {
                       required: "Por favor ingrese un apellido válido.",
                       minLength: {
@@ -87,7 +87,7 @@ const Formulario = () => {
                   <Form.Label>DNI</Form.Label>
                   <Form.Control
                     type="number"
-                    placeholder="Ingrese su DNI"
+                    placeholder="Ingrese su dni."
                     {...register("dni", {
                       required: "Debe ingresar su número de DNI.",
                       pattern: {
@@ -106,7 +106,7 @@ const Formulario = () => {
                   <Form.Label>Email</Form.Label>
                   <Form.Control
                     type="email"
-                    placeholder="Ingrese su email"
+                    placeholder="Ingrese su email."
                     {...register("email", {
                       required: "Deve ingresar un correo valido.",
                       pattern: {
@@ -122,7 +122,7 @@ const Formulario = () => {
                 </Form.Group>
 
                 {/* Botón de envío */}
-                <div className="d-grid">
+                <div className="d-grid shadow">
                   <Button variant="primary" type="submit">
                     Enviar
                   </Button>
