@@ -1,5 +1,6 @@
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const Formulario = () => {
   const {
@@ -10,10 +11,13 @@ const Formulario = () => {
   } = useForm();
 
   const validacion = (datos) => {
-    alert("Datos enviados");
-    
-    reset(); // Esto limpia el formulario
-    console.log(datos)
+    Swal.fire(
+      "Datos enviados",
+      "Los datos fueron enviados correctamente",
+      "success"
+    );
+
+    reset(); 
   };
 
   return (
@@ -28,9 +32,9 @@ const Formulario = () => {
           <Card className="shadow">
             <Card.Body>
               <Form
-                onSubmit={handleSubmit(validacion, (errors) =>
-                  alert("Completar todos los datos")
-                )}
+                onSubmit={handleSubmit(validacion, (errors) => {
+                  Swal.fire("Error", "Completar todos los datos", "error");
+                })}
               >
                 {/* Nombre */}
                 <Form.Group className="mb-3" controlId="formNombre">
