@@ -1,17 +1,16 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
 
 function Navform() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
+    <Navbar expand="lg" className="shadow ">
       <Container>
-        <Navbar.Brand href="#home">Tp8-Formulario</Navbar.Brand>
+        <Navbar.Brand href="#home" className="text-light">Tp8-Formulario</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link href="#home" className="">Repocitorio</Nav.Link>
+            <Nav.Link href="#home" className=" text-light">Repocitorio</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
